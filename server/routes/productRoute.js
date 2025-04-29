@@ -8,7 +8,7 @@ const productRouter = Router();
 productRouter.post('/add', upload.array(["images"]), authSeller, addProduct);
 productRouter.get('/list', productList);
 productRouter.get('/:id', getProductById);
-productRouter.post('/stock/:id', authSeller, changeStock);
+productRouter.get('/stock/:id', authSeller, changeStock);
 
 
 export default productRouter;
