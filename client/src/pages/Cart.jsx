@@ -56,6 +56,7 @@ const Cart = () => {
     try {
       if (!user) {
         setShowUserLogin(true);
+        return;
       }
 
       if (!selectedAddress) {
